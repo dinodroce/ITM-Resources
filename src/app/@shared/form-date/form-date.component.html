@@ -1,0 +1,12 @@
+<div [formGroup]="form">
+  <div class="input-group">
+    <input type="text" class="form-control" placeholder="Date of birth"
+      ngbDatepicker
+      #d="ngbDatepicker"
+      [formControlName]="'dateOfBirth'"
+      [minDate]="minDate"
+      [maxDate]="maxDate"
+    />
+    <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+.landing-container {
+  position: relative;
+
+  .landing-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 50vh;
+    height: 100%;
+
+    button {
+      width: 200px;
+      font-size: 18px;
+      box-shadow: none;
+    }
+  }
+}

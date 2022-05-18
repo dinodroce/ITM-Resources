@@ -1,0 +1,29 @@
+<app-loader [isLoading]="isLoading"></app-loader>
+<div *ngIf="!isLoading" class="edit-container py-5 my-5">
+  <div class="edit-box">
+    <div class="container">
+      <div class="col-md-6 mt-3 mx-auto">
+        <form [formGroup]="editForm">
+          <div class="m-3">
+            <label class="d-block my-3">
+              <input type="text" class="form-control" formControlName="title" autocomplete="off"
+                [placeholder]="'Title'" />
+            </label>
+            <label class="d-block mb-3">
+              <textarea type="text" class="form-control" formControlName="body" autocomplete="off"
+                [placeholder]="'Body'"></textarea>
+            </label>
+          </div>
+          <div class="m-3">
+            <button class="btn btn-primary cursor-pointer" type="submit" [disabled]="editForm.invalid || isLoading" (click)="savePost()">
+              <span>Save</span>
+            </button>
+            <button class="btn btn-secondary cursor-pointer text-white" type="button" (click)="cancelPost()">
+              <span>Cancel</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

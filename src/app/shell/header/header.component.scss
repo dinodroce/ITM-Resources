@@ -1,0 +1,10 @@
+@import "src/theme/theme-variables";
+
+.navbar {
+  margin-bottom: $spacer;
+  z-index: 10;
+}
+
+.nav-link.dropdown-toggle {
+  cursor: pointer;
+}

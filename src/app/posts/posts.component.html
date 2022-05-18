@@ -1,0 +1,18 @@
+<app-loader [isLoading]="isLoading"></app-loader>
+<div class="container dashboard" *ngIf="!isLoading">
+  <div class="row">
+    <div class="col-xl-4 col-md-6 mb-5 d-flex" *ngFor="let post of newPosts">
+      <div class="card">
+        <div class="card-body">
+          <img src="/assets/blog.jpg" alt="{{ post.title }}" class="w-100 mb-3">
+          <h3>{{ post.title }}</h3>
+          <p>{{ post.body }}</p>
+          <div class="post-buttons">
+            <button type="button" class="btn btn-primary text-white me-2" (click)="onEdit(post.id)">Edit</button>
+            <button type="button" class="btn btn-danger" (click)="onDelete(post.id)">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
